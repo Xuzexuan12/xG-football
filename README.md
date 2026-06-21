@@ -5,8 +5,9 @@ This repository contains the code, derived tables, and manuscript-supporting fig
 ## Repository Contents
 
 - `Code/`: Python analysis and figure-generation scripts.
-- `frontiers_submission/results/`: derived CSV outputs used for manuscript tables, robustness checks, calibration analyses, and supplementary results.
-- `figures/`: publication figures exported from the analysis pipeline.
+- `SR_Submission/results/`: derived CSV outputs used for manuscript tables, robustness checks, calibration analyses, and supplementary results.
+- `SR_Submission/figures/`: publication figures exported from the analysis pipeline.
+- `SR_Submission/SR-Manuscript/`: Scientific Reports manuscript source package.
 - `data/`: local data workspace. Could download at Statmbob.
 
 ## Main Reproduction Commands
@@ -22,7 +23,7 @@ python -m pip install -r requirements.txt
 Run the main multi-competition analysis:
 
 ```sh
-python Code/revision_multicomp_analysis.py
+python Code/multicomp_analysis.py
 ```
 
 Run the Bayesian calibration and finishing-residual analyses:
@@ -34,7 +35,7 @@ python Code/bayesian_xg_analysis.py --draws 1000 --tune 1000 --chains 4 --target
 Regenerate manuscript figures:
 
 ```sh
-python Code/frontiers_figure_package.py
+python Code/sr_figure_package.py
 ```
 
 ## Data Availability
@@ -53,9 +54,9 @@ Before public release, verify whether the raw event and match files can be redis
 - data-source instructions;
 - processed, non-sensitive derived tables needed to verify the reported results;
 - checksums or filenames for the raw files expected by the scripts;
-- generated result CSVs in `frontiers_submission/results/`.
+- generated result CSVs in `SR_Submission/results/`.
 
 
 ## Reproducibility Notes
 
-The current workflow writes outputs to both `sage_latex_template_4/revision_outputs/` and `frontiers_submission/results/`. For the public GitHub version, use `frontiers_submission/results/` as the canonical result-output directory and treat old template folders as local working material.
+The public GitHub version should use `SR_Submission/` as the canonical Scientific Reports package. Treat `frontiers_submission/`, `sage_latex_template_4/`, and `scientific_reports_submission/` as old local working material unless a reviewer explicitly requests those historical files.
