@@ -59,4 +59,4 @@ Before public release, verify whether the raw event and match files can be redis
 
 ## Reproducibility Notes
 
-The public GitHub version should use `SR_Submission/` as the canonical Scientific Reports package. Treat `frontiers_submission/`, `sage_latex_template_4/`, and `scientific_reports_submission/` as old local working material unless a reviewer explicitly requests those historical files.
+The public GitHub version should use `SR_Submission/` as the canonical Scientific Reports package. Treat old non-SR submission and template workspaces as local working material unless a reviewer explicitly requests those historical files.
